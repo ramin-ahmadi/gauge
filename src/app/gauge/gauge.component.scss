@@ -1,0 +1,10 @@
+.gauge{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    background-color:var(--color-gray);
+    max-width: 260px;
+}

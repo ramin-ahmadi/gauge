@@ -1,0 +1,12 @@
+.last-train{
+    &__container{
+        min-height: 30px;
+        background-color: var(--color-blue);
+    }
+    &__message{
+        background-color: black;
+        font-size: 0.70rem;
+        color: white;
+        padding: 15px;
+    }
+}

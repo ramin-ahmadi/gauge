@@ -1,0 +1,27 @@
+.weighbridge-name{
+    margin-bottom: 30px;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &__name{
+            color: var(--color-blue);
+            margin: 0 0 5px 0;
+            font-size: 1.75rem;
+        }
+        &__status{
+           margin-left: 5px;
+           color: var(--color-red);
+           font-size: 1.2rem;
+        }
+        &__verification{
+            color: var(--color-yellow);
+            margin-left: auto;
+            padding-right: 15px;
+        }
+    }
+    &__state{
+        color: white;
+        font-weight: 600;
+    }
+}
