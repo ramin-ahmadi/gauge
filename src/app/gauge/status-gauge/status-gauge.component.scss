@@ -120,9 +120,13 @@
         &__icons{
             font-family: FontAwesome;
             font-size: 0.35rem;
-            stroke: var(--color-green);
             stroke-width: 0.4;
         }
     
+    }
+    &__availability{
+        position: relative;
+        top: -205px;
+        overflow: visible;
     }
 }

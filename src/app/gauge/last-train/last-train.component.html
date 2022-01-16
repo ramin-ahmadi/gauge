@@ -1,7 +1,10 @@
-<div class="last-train">
-    <div class="last-train__container">
+<ng-container *ngIf="(weighbridge | json) != '{}'">
+    <div class="last-train">
+        <div class="last-train__container">
+        </div>
+        <div class="last-train__message">
+          The last train was {{weighbridge.minutesSinceLastTrain}} ago
+        </div>
     </div>
-    <div class="last-train__message">
-        The last train was 61 minutes ago
-    </div>
-</div>
+</ng-container>
+
