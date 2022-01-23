@@ -41,10 +41,22 @@
                     [ngStyle]="{'stroke': 'var('+getStatusColor(weighbridge.iLine2Status)+')'}">&#xf83e;</text>
             </g>
         </svg>
-        <svg viewBox="0 0 50 50" class="gauge__availability">
-            <path id="arc1" fill="none" stroke="#446688" stroke-width="2" *ngFor="let availability of availabilities"
-            [ngStyle]="{'stroke': 'var('+getStatusColor(availability.status)+')'}"
-            [attr.d]="drawAvailability(availability?.fromDateTime,availability?.toDateTime)" />
-        </svg>
+            <svg viewBox="0 0 50 50" class="gauge__availability">
+                <path id="arc1" fill="none"  stroke-width="2" *ngFor="let availability of availabilities"
+                    [ngStyle]="{'stroke': 'var('+getStatusColor(availability.status)+')'}"
+                    [attr.d]="drawAvailability(availability?.fromDateTime,availability?.toDateTime)">
+                    <title>{{convertUTCToHumanTime(availability?.fromDateTime)}} {{convertUTCToHumanTime(availability?.toDateTime)}}</title>
+                </path>
+            </svg>
+            <svg viewBox="0 0 50 50" class="gauge__trains">
+                <a [title]="convertUTCToHumanTime(train?.eventDateTime)" (click)="onTrainEventClick(train?.pdfUrl)"  *ngFor="let train of trains">
+                    <path id="arc1" fill="none"  stroke-width="4" 
+                        [ngStyle]="{'stroke': 'var('+getStatusColor(train.status)+')'}"
+                        [attr.d]="drawTrainEvent(train?.eventDateTime)">
+                        <title>{{convertUTCToHumanTime(train?.eventDateTime)}}</title>
+                    </path>
+                </a>
+            </svg>
     </div>
+
 </ng-container>

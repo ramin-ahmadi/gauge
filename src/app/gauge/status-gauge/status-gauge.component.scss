@@ -1,5 +1,5 @@
 .gauge {
- 
+    max-height: 200px;
     padding: 30px;
     &__container {
         width: 200px;
@@ -129,4 +129,21 @@
         top: -205px;
         overflow: visible;
     }
+
+    &__trains{
+        position: relative;
+        top: -418px;
+        overflow: visible;
+        a{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
 }
+
+
+  
+ .error-container{
+     position: absolute;
+ }
